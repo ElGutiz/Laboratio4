@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.laboratorio4.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/toPuertoQuetzal"
+            app:destination="@id/puerto_Quetzal" />
+        <action
+            android:id="@+id/toTikal"
+            app:destination="@id/tikal" />
+        <action
+            android:id="@+id/toAmatitlan"
+            app:destination="@id/lago_Amatitlan" />
+    </fragment>
+    <fragment
+        android:id="@+id/puerto_Quetzal"
+        android:name="com.example.laboratorio4.Puerto_Quetzal"
+        android:label="fragment_puerto__quetzal"
+        tools:layout="@layout/fragment_puerto__quetzal" >
+        <action
+            android:id="@+id/toShareComment1"
+            app:destination="@id/shareComment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tikal"
+        android:name="com.example.laboratorio4.Tikal"
+        android:label="fragment_tikal"
+        tools:layout="@layout/fragment_tikal" >
+        <action
+            android:id="@+id/toShareComment2"
+            app:destination="@id/shareComment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lago_Amatitlan"
+        android:name="com.example.laboratorio4.Lago_Amatitlan"
+        android:label="fragment_lago__amatitlan"
+        tools:layout="@layout/fragment_lago__amatitlan" >
+        <action
+            android:id="@+id/toShareComment3"
+            app:destination="@id/shareComment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shareComment"
+        android:name="com.example.laboratorio4.shareComment"
+        android:label="fragment_share_comment"
+        tools:layout="@layout/fragment_share_comment" >
+        <action
+            android:id="@+id/toMain"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
+
